@@ -9,7 +9,7 @@ const app = express();
 app.use('/etupay', etupay.router);
 
 // Routes
-app.post('/etupay/buy', (req, res, next) => {
+app.get('/etupay/buy', (req, res, next) => {
     const basket = new Basket('Description', 'John', 'Doe', 
         'john@doe@utt.fr', 'checkout', 'Additionnal data');
 
@@ -25,17 +25,17 @@ app.post('/etupay/buy', (req, res, next) => {
 
 app.get('/etupay/callback', (req, res, next) => {
     console.log('Callback');
-    console.log(req.etupay);
+    res.json(req.etupay);
 });
 
 app.get('/etupay/success', (req, res, next) => {
     console.log('Success');
-    console.log(req.etupay);
+    res.json(req.etupay);
 });
 
 app.get('/etupay/error', (req, res, next) => {
     console.log('Error');
-    console.log(req.etupay);
+    res.json(req.etupay);
 });
 
 // Gestion d'erreurs, pouvant être lancées par la lib
