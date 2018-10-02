@@ -1,23 +1,16 @@
 {
-  "name": "node-etupay",
-  "version": "1.0.0",
-  "description": "Middlewares simplifiant l'utilisation d'etupay",
+  "name": "@ung/node-etupay",
+  "version": "2.0.0",
+  "description": "Middleware simplifiant l'utilisation d'etupay",
   "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Axel Mousset",
   "repository": {
-  "type": "git",
-  "url": "git://github.com/ungdev/node-etupay.git"
+    "type": "git",
+    "url": "git://github.com/ungdev/node-etupay.git"
   },
   "license": "MIT",
-  "engines" : {
-    "node" : ">=6.6.0"
-  },
   "dependencies": {
     "atob": "^2.0.3",
-    "btoa": "^1.1.2",
-    "express": "^4.14.1"
+    "btoa": "^1.1.2"
   }
 }
