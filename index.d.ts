@@ -10,7 +10,9 @@ declare module '@ung/node-etupay' {
   class Basket {
     constructor(title: string, firstname: string, lastname: string, email: string, type: string, data: string);
 
-    addItem(name: string, price: number, quantity: number): void;
+    addItem(name: string, price: number, quantity: number): Basket;
+
+    getPrice(): number;
 
     compute(): string;
   }
