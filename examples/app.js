@@ -22,17 +22,17 @@ app.get('/etupay/buy', (req, res, next) => {
 
 app.get('/etupay/callback', etupay.middleware, (req, res, next) => {
     console.log('Callback');
-    res.json(req.etupay);
+    res.json(res.locals.etupay);
 });
 
 app.get('/etupay/success', etupay.middleware, (req, res, next) => {
     console.log('Success');
-    res.json(req.etupay);
+    res.json(res.locals.etupay);
 });
 
 app.get('/etupay/error', etupay.middleware, (req, res, next) => {
     console.log('Error');
-    res.json(req.etupay);
+    res.json(res.locals.etupay);
 });
 
 // Gestion d'erreurs, pouvant être lancées par la lib
